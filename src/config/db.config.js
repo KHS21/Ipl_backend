@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const db_url =
-  "mongodb+srv://kk9490829:8073277482@cluster0.j6zispw.mongodb.net/?retryWrites=true&w=majority";
+console.log(process.env.DB_URL);
+console.log(process.env.NAME)
+
+const db_url =process.env.DB_URL;
 
 const db_connection = async () => {
   await mongoose.connect(db_url);

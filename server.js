@@ -4,6 +4,7 @@ const db_connection = require("./src/config/db.config");
 const TeamRouter = require("./src/routes/team.routes");
 const PlayerRouter = require("./src/routes/player.routes");
 
+
 const app = express();
 app.use(bodyParser.json());
 app.use(TeamRouter);
