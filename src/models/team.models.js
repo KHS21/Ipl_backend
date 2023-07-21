@@ -18,6 +18,13 @@ const TeamSchema = new Schema({
     owner:{
         type: String,
     },
+    players:[
+        {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref:"Player",
+            duplicates:false
+        }
+    ]
 })
 
 const Team = mongoose.model("Team",TeamSchema)
