@@ -19,6 +19,7 @@ const getAllTeam = async (req, res) => {
 
 const getATeam = async (req, res) => {
   const teamId = req.params.teamId
+  console.log(teamId)
   const response = await Team.findById(teamId);
   res.json({ msg: response });
 }
